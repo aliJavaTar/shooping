@@ -17,4 +17,14 @@ public class CustomerManagerImplement implements CustomerManager {
 
         return databaseCustomer.insertCustomer(new Customer(username,password));
     }
+    @Override
+    public boolean insertCustomerWhitMoney(String username, String password,int wallet) throws SQLException {
+
+        return databaseCustomer.insertCustomerWhitMoney(new Customer(username,password,wallet));
+    }
+
+    @Override
+    public boolean updateCustomer(int id ,int wallet) throws SQLException {
+        return databaseCustomer.updateWalletCustomer(id,wallet);
+    }
 }

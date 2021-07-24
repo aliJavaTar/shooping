@@ -4,6 +4,13 @@ public class Customer {
     private int customerId;
     private String username;
     private String password;
+    private int wallet;
+
+    public Customer(String username, String password, int wallet) {
+        this.username = username;
+        this.password = password;
+        this.wallet = wallet;
+    }
 
     public Customer() {
     }
@@ -35,5 +42,22 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(int wallet) {
+        this.wallet = wallet;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "customerId = " + customerId +
+                " username = " + username + '\'' +
+                " password = " + password + '\'' +
+                " wallet = " + wallet ;
     }
 }
